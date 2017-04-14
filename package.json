@@ -1,0 +1,29 @@
+{
+  "name": "custom-config",
+  "version": "1.0.1",
+  "description": "Custom configuration for nodejs application",
+  "main": "custom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kabilgithub/nodejs-custom-config.git"
+  },
+  "keywords": [
+    "Custom",
+    "Configration",
+    "Dynamic",
+    "Configuration",
+    "Custom-Config",
+    "cust-config",
+    "dynconfig",
+    "dynamic-config"
+  ],
+  "author": "Kabil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kabilgithub/nodejs-custom-config/issues"
+  },
+  "homepage": "https://github.com/kabilgithub/nodejs-custom-config#readme"
+}
