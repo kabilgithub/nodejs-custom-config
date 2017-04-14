@@ -1,4 +1,4 @@
-# Dynconfig
+# custom-config
 
 Custom configuration for nodejs application
 
