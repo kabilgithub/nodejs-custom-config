@@ -1,4 +1,4 @@
-# custom-config
+# Custom Config
 
 Custom configuration for nodejs application
 
