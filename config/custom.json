@@ -1,17 +1,17 @@
 {
     "Cache": {
-        "SlidingExpiry": "10"
+        "duration": "10"
     },
     "SampleData": {
-        "slidingexpiry": 1,
+        "expiry": 1,
         "pagesize": 5,
         "enable": true,
         "servers": [
             {
-                "item": "abc"
+                "item": "123"
             },
             {
-                "item": "xyz"
+                "item": "abc"
             }
         ]
     }
