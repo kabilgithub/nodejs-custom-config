@@ -8,9 +8,9 @@ module.exports = {
    * returns json object
    * @returns
    */
-  read: function () {
+  read: function (fileName) {
      try {
-      var data = fs.readFileSync('./config/custom.json', 'utf8');
+      var data = fs.readFileSync('./config/' + fileName +'.json', 'utf8');
       if (data)
         return JSON.parse(data);
       else

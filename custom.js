@@ -7,14 +7,16 @@ var typeCast = require('./typecast.js');
  * @returns
  */
 function getConfigValue(key) {
-    var value = file.read();
+    var fileName = key.split('.')[0];
+    var value = file.read(fileName);
+
     if (value) {
         var data;
-        key.split('/').forEach(function (item, index) {
-            if (index > 0) {
+        key.split('.').forEach(function (item, index) {
+            if (index > 1) {
                 data = data[item];
             }
-            else {
+            else if (index == 1) {
                 data = value[item];
             }
 

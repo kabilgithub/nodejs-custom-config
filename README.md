@@ -8,9 +8,11 @@ npm install custom-config
 
 # Usage example
 
-Create custom configuration file  as “config\custom.json” in your project.
+Create configuration file's as “config\custom.json, config\client.json”, etc in your project.
 
-JSON
+# File 1
+
+custom.json
 
 {
     "Cache": {
@@ -31,12 +33,24 @@ JSON
     }
 }
 
+# File 2
+
+client.json
+
+{
+    "api": {
+        "url": "www.test.com"
+    }
+}
+
+
 # Code
 
 var custConfig = require('custom-config');
 
-console.log(custConfig.Item('Cache/duration'));
-console.log(custConfig.Items(' SampleData/servers));
+console.log(custConfig.Item('custom.Cache.duration')); /* filename.key.key */
+console.log(custConfig.Item('client.api.url'));
+console.log(custConfig.Items(' SampleData/servers)); 
 
 # Options 
 
