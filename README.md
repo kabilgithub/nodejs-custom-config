@@ -49,7 +49,9 @@ client.json
 var custConfig = require('custom-config');
 
 console.log(custConfig.Item('custom.Cache.duration')); /* filename.key.key */
+
 console.log(custConfig.Item('client.api.url'));
+
 console.log(custConfig.Items(' SampleData/servers)); 
 
 # Options 
