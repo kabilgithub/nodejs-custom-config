@@ -13,8 +13,26 @@ function getConfigValue(key) {
     if (value) {
         var data;
         key.split('.').forEach(function (item, index) {
+            var v = key.split('.').length;
             if (index > 1) {
-                data = data[item];
+                if (Array.isArray(data)) {
+                    var dataItemArr = [];
+                    data.forEach(function (dataItem, dataIndex) {
+                        if (Array.isArray(dataItem) && key.split('.').length - 1 == index) {
+                            dataItem.forEach(function (subItem, subItemIndex) {
+                                dataItemArr.push(subItem[item]);
+                            })
+
+                        }
+                        else {
+                            dataItemArr.push(dataItem[item]);
+                        }
+                    })
+                    data = dataItemArr;
+                }
+                else {
+                    data = data[item];
+                }
             }
             else if (index == 1) {
                 data = value[item];
@@ -92,8 +110,7 @@ module.exports = {
      */
     Items: function (key) {
         if (key) {
-            var value = getConfigValue(key);
-            return typeCast.GetAsItems(value);
+            return getConfigValue(key);
         }
         return [];
     }
